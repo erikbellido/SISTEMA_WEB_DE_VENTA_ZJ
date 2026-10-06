@@ -1,0 +1,42 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Usuario } from '../models';
+import { environment } from '../../../environments/environment';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UsuarioService {
+  private readonly apiUrl = `${environment.apiBaseUrl}/usuarios`;
+
+  constructor(private http: HttpClient) {}
+
+  listarTodos(): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>(this.apiUrl);
+  }
+
+  obtenerPorId(id: number): Observable<Usuario> {
+    return this.http.get<Usuario>(`${this.apiUrl}/${id}`);
+  }
+
+  crearUsuario(datos: any): Observable<Usuario> {
+    return this.http.post<Usuario>(this.apiUrl, datos);
+  }
+
+  actualizarUsuario(id: number, datos: any): Observable<Usuario> {
+    return this.http.put<Usuario>(`${this.apiUrl}/${id}`, datos);
+  }
+
+  cambiarRol(id: number, rol: string): Observable<Usuario> {
+    return this.http.put<Usuario>(`${this.apiUrl}/${id}/rol`, { rol });
+  }
+
+  cambiarEstado(id: number, activo: boolean): Observable<Usuario> {
+    return this.http.put<Usuario>(`${this.apiUrl}/${id}/estado`, { activo });
+  }
+
+  desactivar(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  }
+}
