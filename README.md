@@ -41,6 +41,19 @@ npm install
 npm start
 ```
 
+## Ramas del repositorio
+
+| Rama | Propósito | Estado |
+|------|-----------|--------|
+| `main` | Producción; solo se actualiza con merges de release | estable |
+| `develop` | Integración del trabajo de ambos desarrolladores | activa |
+| `feature/base-de-datos` | Esquema y datos de SQL Server | fusionada |
+| `feature/backend` | API REST Spring Boot | fusionada |
+| `feature/frontend` | Aplicación Angular | fusionada |
+
+Las ramas `feature/*` nacen de `develop`, se fusionan con `--no-ff` mediante Pull Request
+y `main` solo avanza con merges de release desde `develop`.
+
 ## Flujo de trabajo Git (2 desarrolladores)
 
 Repositorio: <https://github.com/erikbellido/SISTEMA_WEB_DE_VENTA_ZJ.git>
