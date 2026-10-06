@@ -1,0 +1,27 @@
+# --- Node / Angular ---
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+npm-debug.log*
+yarn-error.log*
+
+# --- Java / Maven ---
+backend/target/
+*.class
+*.jar
+*.war
+
+# --- Archivos de IDE y sistema ---
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# --- Variables y entornos locales ---
+*.local
+.env
+.env.*
+
+# --- Carpeta interna de Freebuff ---
+.freebuff/
