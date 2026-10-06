@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+/* ============================================
+   TEMA ZAPATERÍA JOSELITO — NARANJA & BLANCO
+   ============================================ */
+:root {
+  /* Naranja llamativo */
+  --orange-600: #f97316;
+  --orange-500: #fb923c;
+  --orange-700: #ea580c;
+  --orange-100: #ffedd5;
+  --orange-50: #fff7ed;
+  --orange-glow: rgba(249, 115, 22, 0.35);
+
+  /* Blancos y grises de superficie */
+  --white: #ffffff;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-700: #374151;
+  --gray-900: #111827;
+
+  /* Estados */
+  --green-500: #16a34a;
+  --red-500: #dc2626;
+  --red-50: #fee2e2;
+  --green-50: #dcfce7;
+
+  /* Semánticos */
+  --surface: var(--white);
+  --surface-alt: var(--gray-50);
+  --border: var(--gray-200);
+  --text-main: #1f2937;
+  --text-muted: var(--gray-500);
+  --accent: var(--orange-600);
+  --accent-hover: var(--orange-700);
+  --accent-soft: var(--orange-100);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--text-main);
+  font-family: 'Outfit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Scrollbar estilizada */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-300);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--orange-500);
+}
